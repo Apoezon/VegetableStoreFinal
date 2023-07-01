@@ -38,11 +38,11 @@
                                     <td class="image-prod"><a href="{% url 'store:product' item.product.id %}"><div class="img" style="background-image:url(/{{ item.product.image }});"></div></a></td>
 
                                     <td class="product-name">
-                                        <h3>{{item.product.name}}*</h3><!-- Название из БД-->
-                                        <p>{{description}}d*</p><!-- Описание из БД-->
+                                        <h3>{{item.product.name}}</h3><!-- Название из БД-->
+                                        <p>{{item.product.description}}</p><!-- Описание из БД-->
                                     </td>
 
-                                    <td class="price">{{item.product.price}}*</td><!-- Стоимость из БД-->
+                                    <td class="price">${{item.product.price}}</td><!-- Стоимость из БД-->
 
                                   </tr>
                               {% endfor %}<!-- Конец цикла-->
