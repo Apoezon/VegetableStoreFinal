@@ -20,7 +20,7 @@ from store.urls import router #as all_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('other/', include('other.urls')),
+    # path('other/', include('other.urls')),
     path('login/', include('login.urls')),
     path('', include('store.urls')),
     path('api/', include(router.urls)),
