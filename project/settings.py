@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'other',
-    'login',
+    'login', # 'login.apps.StoreConfig' - в дальнейшем упростит работу с классом конфигурации
     'store',
     'rest_framework',
 ]

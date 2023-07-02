@@ -127,11 +127,10 @@ class AddToWishlistView(View):
         if request.user.is_authenticated:
             item_id = id
             wl_items = Wishlist.objects.filter(user=request.user, product__id=item_id)
-            # if wl_items:
-            #     print('уже в корзине')
-            #     return redirect('#')
-            # else:
-            if not wl_items:
+            if wl_items:
+                print('уже в корзине')
+                return redirect('store:shop')
+            else:
                 print('давай добавим')
                 product = get_object_or_404(Product, id=item_id)
 
